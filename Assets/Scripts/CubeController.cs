@@ -137,7 +137,7 @@ public class CubeController : MonoBehaviour
 				{
 					// si estamos muy cerca vamos a ir a por el player si o si
 					float tam = m_Cube.bounds.size.x * 4;
-					float dist = Vector3.Distance(player.transform.position, transform.position);
+					float dist = Vector3.Distance(Player.transform.position, transform.position);
 
 					bool demasiadocerca = false;
 
