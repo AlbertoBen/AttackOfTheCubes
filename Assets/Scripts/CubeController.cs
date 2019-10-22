@@ -41,7 +41,8 @@ public class CubeController : MonoBehaviour
 	public float m_MoveSpeed = 0.15f;
 
 	GameObject Player;
-	float totalVal = 0;
+	
+	float totalVal = 0;// al rotar el cubo nos guardamos los grados que ya hemos rotado en ese eje 
 
 	void Awake()
 	{
