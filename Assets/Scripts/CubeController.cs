@@ -115,7 +115,7 @@ public class CubeController : MonoBehaviour
 		{
 			case Comportamiento.Simple:
 				{
-					EjecutaRodar(GetDireccionFromTarget(GameObject.FindWithTag("Player")));
+					EjecutaRodar(GetDireccionFromTarget(Player));
 				}
 				break;
 
@@ -123,11 +123,11 @@ public class CubeController : MonoBehaviour
 				{
 					if ((Random.Range(0, 2) == 0))
 					{
-						EjecutaSaltar(GetDireccionFromTarget(GameObject.FindWithTag("Player")));
+						EjecutaSaltar(GetDireccionFromTarget(Player));
 					}
 					else
 					{
-						EjecutaRodar(GetDireccionFromTarget(GameObject.FindWithTag("Player")));
+						EjecutaRodar(GetDireccionFromTarget(Player ));
 
 					}
 				}
@@ -137,8 +137,6 @@ public class CubeController : MonoBehaviour
 				{
 					// si estamos muy cerca vamos a ir a por el player si o si
 					float tam = m_Cube.bounds.size.x * 4;
-
-					GameObject player = GameObject.FindWithTag("Player");
 					float dist = Vector3.Distance(player.transform.position, transform.position);
 
 					bool demasiadocerca = false;
@@ -151,7 +149,7 @@ public class CubeController : MonoBehaviour
 
 					if (contadorDeRepeticionDeDireccion == 0 || demasiadocerca)
 					{
-						ultimaDireccion = GetDireccionFromTarget(GameObject.FindWithTag("Player"));
+						ultimaDireccion = GetDireccionFromTarget(Player);
 						contadorDeRepeticionDeDireccion = repetirDireccion;
 					}
 					else
