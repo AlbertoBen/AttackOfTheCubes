@@ -170,7 +170,7 @@ public class CubeController : MonoBehaviour
 		//esta funcion calcula la direccion respecto a la posicion que queremos ir... normalmente el player
 		Vector3 DireccionHacia = objetoHacia.transform.position - m_Cube.transform.position;
 		DireccionHacia = DireccionHacia.normalized;
-		float dotHaciaDelanteOdetras = Vector3.Dot(DireccionHacia, transform.forward);
+		float dotHaciaDelanteOdetras = Vector3.Dot(DireccionHacia, ObjetoCubo.transform.forward);
 		float dotHaciaLosLados = Vector3.Dot(DireccionHacia, transform.right);
 
 		if (Mathf.Abs(dotHaciaDelanteOdetras) > Mathf.Abs(dotHaciaLosLados))
