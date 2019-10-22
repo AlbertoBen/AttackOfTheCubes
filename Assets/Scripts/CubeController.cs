@@ -137,7 +137,7 @@ public class CubeController : MonoBehaviour
 				{
 					// si estamos muy cerca vamos a ir a por el player si o si
 					float tam = m_Cube.bounds.size.x * 4;
-					float dist = Vector3.Distance(Player.transform.position, transform.position);
+					float dist = Vector3.Distance(Player.transform.position, ObjetoCubo.transform.position);
 
 					bool demasiadocerca = false;
 
@@ -168,7 +168,7 @@ public class CubeController : MonoBehaviour
 		//esta funcion calcula la direccion respecto a la posicion que queremos ir... normalmente el player
 		Vector3 DireccionHacia = objetoHacia.transform.position - m_Cube.transform.position;
 		DireccionHacia = DireccionHacia.normalized;
-		float dotHaciaDelanteOdetras = Vector3.Dot(DireccionHacia, ObjetoCubo.transform.forward);
+		float dotHaciaDelanteOdetras = Vector3.Dot(DireccionHacia, transform.forward);
 		float dotHaciaLosLados = Vector3.Dot(DireccionHacia, transform.right);
 
 		if (Mathf.Abs(dotHaciaDelanteOdetras) > Mathf.Abs(dotHaciaLosLados))
