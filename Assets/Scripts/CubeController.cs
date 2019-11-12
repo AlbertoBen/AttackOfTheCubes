@@ -3,6 +3,9 @@
 using UnityEngine;
 using System.Collections;
 
+//Se evita hacer herencia si en el futuro se migra a ECS aumentaria la dificultad
+//preferible partirlo en componentes para ser tratado por diferentes sistemas 
+// ojo que hay gente que le gusta mas hacer esto en herencia , pero tiene sus pros y sus contras
 
 public class CubeController : MonoBehaviour
 {
