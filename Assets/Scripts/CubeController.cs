@@ -99,7 +99,7 @@ public class CubeController : MonoBehaviour
 		int layerMask = 1 << layerId;
 
 		//vemos que hay donde queremos volcar
-		Collider[] hitColliders = Physics.OverlapBox(dir, (cubeTransform.localScale * 0.9f) / 2, cubeTransform.rotation, layerMask);
+		Collider[] hitColliders = Physics.OverlapBox(dir, (cubeTransform.localScale ) / 2, cubeTransform.rotation, layerMask);
 		int i = 0;
 
 		while (i < hitColliders.Length)
