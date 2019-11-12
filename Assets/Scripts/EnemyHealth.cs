@@ -25,6 +25,11 @@ public class EnemyHealth : MonoBehaviour
 // bien esto es valido cuando el proyectil es un infinitesimo .. pero si tu proyectil tiene volumen y el player puede percibir que el 
 // proyectil roza a un cubo y no lo daña... crea frustracion y la frustracion lleva al odio y el odio lleva al lado oscuro
 
+// si el proyectir va muy rapido y no se detecta siempre se puede usar la deteccion de colisiones continua
+// https://docs.unity3d.com/ScriptReference/Rigidbody-collisionDetectionMode.html
+
+// LOS RAYCAST NO SON MAS PRECISOS , SON UN RAYCAST , y si el proyectil es una bola tiene volumen...
+
 	void OnTriggerEnter(Collider other)
 	{
 		if (isDead) return;
