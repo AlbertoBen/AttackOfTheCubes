@@ -21,6 +21,10 @@ public class EnemyHealth : MonoBehaviour
 		currentHealth = startingHealth;
 	}
 
+// aqui hay personas que pueden valorar usar un raycast para detectar la colision
+// bien esto es valido cuando el proyectil es un infinitesimo .. pero si tu proyectil tiene volumen y el player puede percibir que el 
+// proyectil roza a un cubo y no lo daña... crea frustracion y la frustracion lleva al odio y el odio lleva al lado oscuro
+
 	void OnTriggerEnter(Collider other)
 	{
 		if (isDead) return;
